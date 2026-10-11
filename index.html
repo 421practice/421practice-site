@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同会社プラクティス</title>
+<meta name="description" content="合同会社プラクティス（兵庫県姫路市）。AIやローコードアプリによる経理の省力化支援、TKC会計システム対応の財務書類作成支援、経理のサポート・指導、経営コンサルティング。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c2a44;
+    --ink-soft: #4a5872;
+    --paper: #fbfcfd;
+    --rule: #c9d6e6;
+    --rule-faint: #e6edf5;
+    --closing: #b8322b;
+    --surface: #f1f5f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e4eaf3;
+      --ink-soft: #a8b4c6;
+      --paper: #121a28;
+      --rule: #34445e;
+      --rule-faint: #1d2839;
+      --closing: #e0655c;
+      --surface: #182234;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #e4eaf3;
+    --ink-soft: #a8b4c6;
+    --paper: #121a28;
+    --rule: #34445e;
+    --rule-faint: #1d2839;
+    --closing: #e0655c;
+    --surface: #182234;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--closing); outline-offset: 3px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+  header.site {
+    border-bottom: 1px solid var(--rule);
+  }
+  header.site .wrap {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 64px;
+  }
+  .brand { font-weight: 700; text-decoration: none; font-size: 1rem; }
+  nav a { text-decoration: none; margin-left: 24px; font-size: 0.9rem; color: var(--ink-soft); }
+  nav a:hover { color: var(--ink); }
+  @media (max-width: 560px) { nav a { margin-left: 14px; } }
+
+  /* Hero: ledger paper with a closing double rule */
+  .hero {
+    background-image: repeating-linear-gradient(
+      to bottom, transparent 0, transparent 39px, var(--rule-faint) 39px, var(--rule-faint) 40px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero .wrap { padding-top: 88px; padding-bottom: 72px; }
+  .hero h1 {
+    font-family: "BIZ UDPMincho", "Hiragino Mincho ProN", serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    margin: 0;
+    display: inline-block;
+    padding-bottom: 14px;
+    border-bottom: 6px double var(--closing);
+  }
+  .hero .en { display: block; margin-top: 14px; color: var(--ink-soft); font-size: 0.95rem; letter-spacing: 0.08em; }
+  .hero p.lead {
+    margin: 40px 0 0;
+    max-width: 34em;
+    font-size: 1.1rem;
+  }
+
+  section { padding: 72px 0; border-bottom: 1px solid var(--rule); }
+  section h2 {
+    font-size: 1.35rem; margin: 0 0 32px; font-weight: 700;
+  }
+
+  .services { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+  .services li {
+    display: grid;
+    grid-template-columns: 15em 1fr;
+    gap: 8px 32px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .services h3 { margin: 0; font-size: 1.02rem; font-weight: 700; }
+  .services p { margin: 0; color: var(--ink-soft); }
+  @media (max-width: 640px) { .services li { grid-template-columns: 1fr; } }
+
+  dl.profile { margin: 0; border-top: 1px solid var(--ink); }
+  .profile div {
+    display: grid; grid-template-columns: 9em 1fr; gap: 4px 32px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule);
+  }
+  .profile dt { color: var(--ink-soft); }
+  .profile dd { margin: 0; }
+  @media (max-width: 560px) { .profile div { grid-template-columns: 1fr; } }
+
+  .contact p { margin: 0 0 24px; max-width: 34em; }
+  .mail {
+    display: inline-block; padding: 14px 28px;
+    background: var(--ink); color: var(--paper);
+    text-decoration: none; font-weight: 700; border-radius: 4px;
+  }
+  .mail:hover { opacity: 0.88; }
+
+  footer { padding: 32px 0 48px; color: var(--ink-soft); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#">合同会社プラクティス</a>
+    <nav>
+      <a href="#services">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>合同会社<br>プラクティス</h1>
+      <span class="en">Practice LLC</span>
+      <p class="lead">AIやローコードアプリを取り入れて、経理と財務書類づくりの手間を減らす。姫路を拠点に、中小企業と個人事業主が自分たちで回せる仕組みづくりを、導入から定着まで支援しています。</p>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>事業内容</h2>
+      <ul class="services">
+        <li>
+          <h3>経理の省力化支援</h3>
+          <p>AIやローコードアプリを使って、記帳や伝票整理、集計などの繰り返し作業を減らす仕組みを一緒に作ります。</p>
+        </li>
+        <li>
+          <h3>財務書類の作成支援</h3>
+          <p>TKC会計システムに対応。AIを活用しながら、決算書や月次の試算表などを自社で作成できるようサポートします。</p>
+        </li>
+        <li>
+          <h3>経理のサポート・指導</h3>
+          <p>日々の経理業務の進め方を、担当者の方に合わせてお教えします。困ったときの相談先としてもご利用ください。</p>
+        </li>
+        <li>
+          <h3>ツールの導入・運用サポート</h3>
+          <p>業務ソフトウェアやアプリの選定、導入設定から、使い続けるための運用まで伴走します。</p>
+        </li>
+        <li>
+          <h3>経営コンサルティング</h3>
+          <p>数字をもとに、資金繰りや業務の改善についてご相談をお受けします。</p>
+        </li>
+        <li>
+          <h3>生命保険のご相談</h3>
+          <p>生命保険の募集に関する業務を行っています。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <h2>会社概要</h2>
+      <dl class="profile">
+        <div><dt>商号</dt><dd>合同会社プラクティス（Practice LLC）</dd></div>
+        <div><dt>代表社員</dt><dd>中野 徹</dd></div>
+        <div><dt>設立</dt><dd>2022年（令和4年）4月21日</dd></div>
+        <div><dt>本店所在地</dt><dd>兵庫県姫路市増位新町二丁目42番地 荻原ビル202号室</dd></div>
+        <div><dt>事業内容</dt><dd>コンピュータソフトウェアによる財務書類の作成業務<br>コンピュータソフトウェアのレンタル及び運用サポート業務<br>経営コンサルティング業務<br>経理事務作業の受託業務<br>生命保険の募集に関する業務</dd></div>
+        <div><dt>メール</dt><dd><a href="mailto:info@421practice.co.jp">info@421practice.co.jp</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>お問い合わせ</h2>
+      <p>ご依頼やご相談は、メールでお気軽にご連絡ください。内容を確認のうえ、担当者よりご返信します。</p>
+      <a class="mail" href="mailto:info@421practice.co.jp">メールで問い合わせる</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 合同会社プラクティス</div>
+</footer>
+</body>
+</html>

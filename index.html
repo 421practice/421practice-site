@@ -196,6 +196,7 @@
   .mail small { display: block; color: #aab1c0; font-size: 0.8rem; }
   .mail strong { font-size: clamp(1.15rem, 2.4vw, 1.5rem); letter-spacing: 0.02em; border-bottom: 1px solid var(--gold); padding-bottom: 4px; word-break: break-all; }
   .mail:hover strong { border-bottom-width: 2px; }
+  .reach { display: grid; gap: 22px; justify-items: start; }
 
   footer { background: var(--ink); color: #aab1c0; font-size: 0.82rem; padding: 0 0 40px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid #3a4760; padding-top: 24px; }
@@ -302,7 +303,7 @@
         <li>
           <div>
             <h3>生命保険のご相談</h3>
-            <p>生命保険の募集に関する業務を行っています。</p>
+            <p>生命保険の募集に関する業務を行っています。<br>取扱保険会社：大同生命保険株式会社</p>
           </div>
           <span class="dog"><img src="images/dogs/welcome-beige.png" alt="" width="165" height="220" loading="lazy"></span>
         </li>
@@ -330,10 +331,13 @@
       </div>
       <dl class="profile">
         <div><dt>商号</dt><dd>合同会社プラクティス（Practice LLC）</dd></div>
+        <div><dt>法人番号</dt><dd>4140003017619</dd></div>
         <div><dt>代表社員</dt><dd>中野 徹</dd></div>
         <div><dt>設立</dt><dd>2022年（令和4年）4月21日</dd></div>
         <div><dt>本店所在地</dt><dd>兵庫県姫路市増位新町二丁目42番地 荻原ビル202号室</dd></div>
         <div><dt>事業内容</dt><dd>コンピュータソフトウェアによる財務書類の作成業務<br>コンピュータソフトウェアのレンタル及び運用サポート業務<br>経営コンサルティング業務<br>経理事務作業の受託業務<br>生命保険の募集に関する業務</dd></div>
+        <div><dt>取扱保険会社</dt><dd>大同生命保険株式会社</dd></div>
+        <div><dt>電話</dt><dd><a href="tel:0792638528">079-263-8528</a></dd></div>
         <div><dt>メール</dt><dd><a href="mailto:info@421practice.co.jp">info@421practice.co.jp</a></dd></div>
       </dl>
     </div>
@@ -353,12 +357,18 @@
     <div class="wrap contact">
       <div>
         <h2><span class="nb">経理の困りごと、</span><br><span class="nb">まずは</span><span class="nb">聞かせてください。</span></h2>
-        <p>ご依頼やご相談は、メールでお気軽にご連絡ください。内容を確認のうえ、担当者よりご返信します。</p>
+        <p>ご依頼やご相談は、メールまたはお電話でお気軽にご連絡ください。メールは内容を確認のうえ、担当者よりご返信します。</p>
       </div>
-      <a class="mail" href="mailto:info@421practice.co.jp">
-        <small>メールで問い合わせる</small>
-        <strong>info@421practice.co.jp</strong>
-      </a>
+      <div class="reach">
+        <a class="mail" href="mailto:info@421practice.co.jp">
+          <small>メールで問い合わせる</small>
+          <strong>info@421practice.co.jp</strong>
+        </a>
+        <a class="mail" href="tel:0792638528">
+          <small>電話で問い合わせる</small>
+          <strong>079-263-8528</strong>
+        </a>
+      </div>
     </div>
   </section>
 </main>

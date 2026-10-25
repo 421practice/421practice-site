@@ -1,0 +1,95 @@
+/* 事務所HP（https://nakano-taxo.tkcnf.com/）の見た目にそろえる：白地・メイリオ・青緑の帯 */
+:root {
+  --ink: #333333;
+  --ink-2: #555555;
+  --ink-3: #888888;
+  --line: #dfe6e5;
+  --aqua: #6099ae;
+  --aqua-dark: #4c8297;
+  --aqua-soft: #eef5f7;
+  --foot: #e9efee;
+  --accent: #c8392e;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+a { color: var(--aqua-dark); }
+a:focus-visible { outline: 2px solid var(--aqua); outline-offset: 3px; }
+h1, h2, h3 { font-weight: 700; word-break: auto-phrase; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* Header：事務所名と電話 */
+.head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+.office-name { color: var(--ink); text-decoration: none; font-size: 1.7rem; font-weight: 700; letter-spacing: 0.08em; }
+.tel { margin: 0; text-align: right; font-size: 0.85rem; line-height: 1.4; color: var(--ink-2); }
+.tel a { display: block; color: var(--ink); text-decoration: none; font-size: 1.7rem; font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; }
+.tel small { font-size: 0.8rem; }
+@media (max-width: 640px) {
+  .head { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .office-name { font-size: 1.4rem; }
+  .tel { text-align: left; }
+  .tel a { font-size: 1.4rem; }
+}
+
+/* メニュー：事務所HPと同じ並び */
+.gnav { background: var(--aqua); }
+.gnav .wrap { display: flex; flex-wrap: wrap; }
+.gnav a { flex: 1 1 auto; padding: 12px 10px; color: #fff; text-decoration: none; font-size: 0.9rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.25); }
+.gnav a:last-child { border-right: 0; }
+.gnav a:hover, .gnav a[aria-current="page"] { background: var(--aqua-dark); }
+@media (max-width: 640px) {
+  .gnav .wrap { padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+  .gnav a { font-size: 0.85rem; padding: 10px 6px; border-bottom: 1px solid rgba(255,255,255,0.25); }
+}
+
+/* Page head：青緑の帯 */
+.page-head { padding: 32px 0 24px; }
+.kicker { margin: 0 0 20px; padding: 10px 14px; background: var(--aqua); color: #fff; font-size: 1.35rem; font-weight: 700; border-radius: 6px; }
+.page-head h1 { margin: 0; font-size: clamp(1.5rem, 3.6vw, 2rem); line-height: 1.5; }
+.page-head .lead { margin: 14px 0 0; color: var(--ink-2); }
+
+/* List */
+.entries { list-style: none; margin: 0 0 64px; padding: 0; border-top: 2px solid var(--aqua); }
+.entries li { border-bottom: 1px solid var(--line); }
+.entries a { display: block; padding: 20px 4px; text-decoration: none; color: var(--ink); }
+.entries time { font-size: 0.8rem; color: var(--ink-3); }
+.entries h2 { margin: 2px 0 6px; font-size: 1.2rem; line-height: 1.5; color: var(--aqua-dark); }
+.entries a:hover h2 { text-decoration: underline; text-underline-offset: 5px; }
+.entries p { margin: 0; color: var(--ink-2); font-size: 0.95rem; }
+
+/* Article */
+.meta { margin: 12px 0 0; font-size: 0.85rem; color: var(--ink-3); }
+article { padding-bottom: 56px; border-top: 2px solid var(--aqua); }
+article h2 { margin: 44px 0 12px; padding: 4px 0 6px 12px; font-size: 1.3rem; line-height: 1.5; border-left: 5px solid var(--aqua); border-bottom: 1px solid var(--line); }
+article p { margin: 0 0 1em; }
+article ul { margin: 0 0 1em; padding-left: 1.3em; }
+article li { margin-bottom: 0.4em; }
+.roa { display: flex; align-items: flex-end; gap: 14px; margin: 28px 0 0; }
+.roa img { flex: none; width: 96px; height: auto; }
+.roa p { position: relative; margin: 0 0 12px; background: var(--aqua-soft); border: 1px solid var(--aqua); border-radius: 18px; padding: 12px 16px; font-size: 0.95rem; line-height: 1.8; }
+.roa p::before { content: ""; position: absolute; left: -6px; bottom: 18px; width: 10px; height: 10px; background: var(--aqua-soft); border-left: 1px solid var(--aqua); border-bottom: 1px solid var(--aqua); transform: rotate(45deg); }
+.roa b { display: block; font-size: 0.8rem; color: var(--aqua-dark); }
+.for-whom { background: #fafafa; border: 1px solid var(--line); border-left: 4px solid var(--aqua); padding: 14px 18px; margin: 20px 0 0; }
+.for-whom p { margin: 0; }
+.figure { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.15rem; }
+.figure em { font-style: normal; color: var(--accent); }
+.small { font-size: 0.85rem; color: var(--ink-3); }
+
+/* 相談の案内 */
+.office { background: var(--aqua-soft); border: 1px solid var(--aqua); border-radius: 6px; padding: 20px 22px; margin: 44px 0 0; }
+.office h2 { margin: 0 0 8px; padding: 0; font-size: 1.1rem; border: 0; }
+.office p { margin: 0 0 0.6em; color: var(--ink-2); }
+.office p:last-child { margin: 0; }
+.back { display: inline-block; margin-top: 28px; font-weight: 700; }
+
+footer { background: var(--foot); padding: 24px 0 20px; font-size: 0.85rem; color: var(--ink-2); }
+footer p { margin: 0 0 8px; line-height: 1.8; }
+footer a { color: var(--ink-2); }

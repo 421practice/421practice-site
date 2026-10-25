@@ -28,13 +28,14 @@ h1, h2, h3 { font-weight: 700; word-break: auto-phrase; }
 
 /* Header：事務所名と電話 */
 .head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
-.office-name { color: var(--ink); text-decoration: none; font-size: 1.7rem; font-weight: 700; letter-spacing: 0.08em; }
+.office-name { display: block; line-height: 0; }
+.office-name img { height: 60px; width: auto; max-width: 100%; }
 .tel { margin: 0; text-align: right; font-size: 0.85rem; line-height: 1.4; color: var(--ink-2); }
 .tel a { display: block; color: var(--ink); text-decoration: none; font-size: 1.7rem; font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; }
 .tel small { font-size: 0.8rem; }
 @media (max-width: 640px) {
   .head { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .office-name { font-size: 1.4rem; }
+  .office-name img { height: auto; width: 100%; max-width: 340px; }
   .tel { text-align: left; }
   .tel a { font-size: 1.4rem; }
 }
